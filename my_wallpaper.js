@@ -59,12 +59,18 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
    ellipse(eyeX, eyeY-1, eyeSize-12, eyeSize-3); 
    ellipse(eyeX-30, eyeY-1, eyeSize-12, eyeSize-3); 
 
+   fill ("#F3E9BD"); //eyebrows
+   ellipse(eyeX-30, eyeY-12, eyeSize-5, eyeSize-10);
+   ellipse(eyeX, eyeY-12, eyeSize-5, eyeSize-10);
+
+
    fill ("#984447"); // red nose
    triangle(noseX-5, noseY, noseX+5, noseY, noseX, noseY+5);
-   strokeWeight(5);
+   triangle(noseX+5, noseY+10, noseX-5, noseY+10, noseX, noseY+5);
+   fill("#FFF4E4");
+   triangle(noseX+6, noseY+11, noseX-6, noseY+11, noseX, noseY+6);
   
    fill ("#F3E9BD");
-   strokeWeight(0);
   //  triangle(70, 20, 130, 120, 100, 150);
   //  triangle(75, 150, 75, 95, 100, 150);
   //  triangle(100, 150, 125, 95, 125, 150);
@@ -81,7 +87,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill ("#F3E9BD");
   rect(headX-45, headY+60, headSize+40, headSize-30);
 
-fill("#0091AD");
+  fill("#0091AD");
   rect(headX-55, headY+50, headSize+60, headSize-40);
+
+  fill ("#F3E9BD"); //paws
+  ellipse(eyeX-30, eyeY+45, eyeSize, eyeSize-5);
+  ellipse(eyeX, eyeY+45, eyeSize, eyeSize-5);
+
 
 }
