@@ -4,13 +4,13 @@ let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.cell_width  = 250;
+  pWallpaper.grid_settings.cell_height = 250;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
@@ -41,9 +41,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
    strokeWeight(0);
 
    ellipse(headX, headY, headSize, headSize); // top head
-   ellipse(headX, headY+50, headSize, headSize);
-   rect(headX-25, headY+50, headSize, headSize);
-   quad(earLeft, earTop, earLeft, earBottom, earRight, earTop, earRight, earBottom);
+   ellipse(headX, headY+50, headSize, headSize); // body
+   quad(earLeft, earTop, earLeft, earBottom, earRight, earTop, earRight, earBottom); //ea
 
    fill ("#984447"); //red ears
    quad(earLeft+3, earTop+5, earLeft+3, earBottom-5, earRight-3, earTop+5, earRight-3, earBottom-5);
