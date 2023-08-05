@@ -4,30 +4,32 @@ let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 180;
+  pWallpaper.grid_settings.cell_height = 190;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
-  background("#feB96e"); 
+  // background("#feB96e"); 
+  background("#984447");
 }
 
-function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  
 
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
   let bodyColour = color(255, 244, 228); // white
-  let baseColour = color(0, 145, 173); // blue
+  // let baseColour = color(0, 145, 173); // blue
+  let baseColour = color(87, 30, 23); // white
   let accentColour = color(243, 233, 189); // yellow
-  let starColour = color(250, 250, 250);
+  // let starColour = color(250, 250, 250);
+  let starColour = (255, 255, 255);
   let extraColour = color(152, 68, 71); // red
-
+  let eyeColour = color(0, 145, 173); //blue
 
 
   var starX1 = 40;
@@ -54,28 +56,35 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   var noseX = 100;
   var noseY = 55;
 
+  strokeWeight(0);
+
+
+  //  if (mouseX > 50) {
+  //   ellipse(starX1, starY1, starSize1, starSize1); //star 1
+  //  } else {
+  //   ellipse(starX2, starY2, starSize2, starSize2); //star 2
+  //  }
+  
  
+////////////////// BACKGROUND STARS
 
 
-   stroke(500);
-   strokeWeight(0);
 
 
-//////////////////// BACKGROUND STARS
-
-   fill (starColour);
-   ellipse(starX1, starY1, starSize1, starSize1); //star 1
+fill (starColour);
+ellipse(starX1, starY1, starSize1, starSize1); //star 1
  
-   fill ("#feB96e"); 
+   fill ("#f4bb7a"); 
    ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
    ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
    ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
    ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
-
-   fill (starColour);
-   ellipse(starX2, starY2, starSize2, starSize2); //star 2
    
-   fill ("#feB96e"); 
+   fill (starColour);
+ellipse(starX2, starY2, starSize1, starSize1); //star 1
+
+
+   fill ("#f4bb7a"); 
    ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
    ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
    ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
@@ -101,7 +110,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
    fill(bodyColour); //white ear covers
    ellipse(headX, headY, headSize-5, headSize-5);
 
-   fill(baseColour); //blue eye
+   fill(eyeColour); //blue eye
    ellipse(eyeX, eyeY, eyeSize, eyeSize); 
    ellipse(eyeX-30, eyeY, eyeSize, eyeSize); 
    
