@@ -4,7 +4,7 @@ let rect_height = 20;
 
   var starX1 = 40;
   var starY1 = 50;
-  var starSize1 = 10;
+  var starSize1 = 50;
   
   var starX2 = 160;
   var starY2 = 90;
@@ -44,18 +44,9 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  // background("#feB96e"); 
-  // background("#984447");
+  //background("#feB96e"); //yellow
+  background("#984447"); //red
 
-  currentColour = color(152, 68, 71);
-  // colours = [
-  //   color(255, 255, 0),
-  //   color(192, 90, 90),
-  //   color(0, 0, 255),
-  //   color(128, 128, 128)
-  // ];
-
-  background(currentColour);
 }
 
 
@@ -63,27 +54,26 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  if (starSize1 > 30) {
-    currentColour = color(0, 0, 255); // Set color to blue
-  } else {
-    currentColour = color(255, 0, 0); // Set color to red
-  }
   
-  wallpaper_background();
 
   noStroke(0);
   strokeWeight(1);
 
   let bodyColour = color(255, 244, 228); // white
   // let baseColour = color(0, 145, 173); // blue
-  let baseColour = color(87, 30, 23); // white
+  let baseColour = color(87, 30, 23); // red
+  // let baseColour = color(255, 244, 228); //white
   let accentColour = color(243, 233, 189); // yellow
   // let starColour = color(250, 250, 250);
   let starColour = (255, 255, 255);
   let extraColour = color(152, 68, 71); // red
   let eyeColour = color(0, 145, 173); //blue
 
-
+  if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
+    eyeColour = color(0, 145, 173); //blue
+  } else {
+    eyeColour = color(87, 30, 23); //dark red
+  }
  
 
 
@@ -133,6 +123,26 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   //  fill("#F6CB0D"); 
   //  ellipse(100, 80, 10, 10);
+
+//////////////// BACKGROUND STARS/FLOWERS
+
+fill (starColour);
+ellipse(starX1, starY1, starSize1, starSize1); //star 1
+   fill ("#f4bb7a"); 
+  ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10); //petals
+  ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
+  ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
+  ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
+ 
+   fill (starColour);
+  
+ellipse(starX2, starY2, starSize1, starSize1); //star 1
+fill ("#f4bb7a"); 
+ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10); //petals
+ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
+ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
+ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
+
 
 
 
@@ -190,23 +200,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //  }
   
  
-//////////////// BACKGROUND STARS
-
-fill (starColour);
-ellipse(starX1, starY1, starSize1, starSize1); //star 1
-   fill ("#f4bb7a"); 
-  ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
-  ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
-  ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
-  ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
- 
-   fill (starColour);
-ellipse(starX2, starY2, starSize1, starSize1); //star 1
-fill ("#f4bb7a"); 
-ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
-ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
-ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
-ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
 
 
 
