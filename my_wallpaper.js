@@ -2,25 +2,77 @@
 let rect_width  = 20;
 let rect_height = 20;
 
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 10;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  // let colours;
+  let currentColour;
+
+  //colour varibles are in my symbol function.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 180;
-  pWallpaper.grid_settings.cell_height = 190;
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.cell_width  = 250;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 150;  
+
 }
 
 function wallpaper_background() {
   // background("#feB96e"); 
-  background("#984447");
+  // background("#984447");
+
+  currentColour = color(152, 68, 71);
+  // colours = [
+  //   color(255, 255, 0),
+  //   color(192, 90, 90),
+  //   color(0, 0, 255),
+  //   color(128, 128, 128)
+  // ];
+
+  background(currentColour);
 }
 
 
+
+
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+  if (starSize1 > 30) {
+    currentColour = color(0, 0, 255); // Set color to blue
+  } else {
+    currentColour = color(255, 0, 0); // Set color to red
+  }
+  
+  wallpaper_background();
+
+  noStroke(0);
+  strokeWeight(1);
 
   let bodyColour = color(255, 244, 228); // white
   // let baseColour = color(0, 145, 173); // blue
@@ -32,66 +84,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let eyeColour = color(0, 145, 173); //blue
 
 
-  var starX1 = 40;
-  var starY1 = 50;
-  var starSize1 = 50;
-
-  var starX2 = 160;
-  var starY2 = 90;
-  var starSize2 = 50;
-  
-  var headX = 100;
-  var headY = 50;
-  var headSize = 50;
-
-  var eyeY = 55;
-  var eyeX = 115;
-  var eyeSize = 18;
-
-  var earLeft = 75;
-  var earRight = 125;
-  var earTop = 10;
-  var earBottom = 50;
-
-  var noseX = 100;
-  var noseY = 55;
-
-  strokeWeight(0);
-
-
-  //  if (mouseX > 50) {
-  //   ellipse(starX1, starY1, starSize1, starSize1); //star 1
-  //  } else {
-  //   ellipse(starX2, starY2, starSize2, starSize2); //star 2
-  //  }
-  
  
-////////////////// BACKGROUND STARS
-
-
-
-
-fill (starColour);
-ellipse(starX1, starY1, starSize1, starSize1); //star 1
- 
-   fill ("#f4bb7a"); 
-   ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
-   ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
-   ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
-   ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
-   
-   fill (starColour);
-ellipse(starX2, starY2, starSize1, starSize1); //star 1
-
-
-   fill ("#f4bb7a"); 
-   ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
-   ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
-   ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
-   ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
-
-
-
 
 
 
@@ -143,10 +136,6 @@ ellipse(starX2, starY2, starSize1, starSize1); //star 1
 
 
 
-
-
-  
-
   /////////////////// MAGICIAN HAT
 
   fill(baseColour);
@@ -164,4 +153,62 @@ ellipse(starX2, starY2, starSize1, starSize1); //star 1
 
 
 
+//   let distanceToStar1 = dist(mouseX, mouseY, starX1, starY1);
+// let distanceToStar2 = dist(mouseX, mouseY, starX2, starY2);
+
+// if (distanceToStar1 < starSize1 / 2) {
+//   fill (starColour);
+//   ellipse(starX1, starY1, starSize1, starSize1); //star 1
+
+//   fill ("#f4bb7a"); 
+//   ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
+//   ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
+//   ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
+//   ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
+
+// } else if (distanceToStar2 < starSize2 / 2) {
+//   fill (starColour);
+//   ellipse(starX2, starY2, starSize2, starSize2); //star 2
+
+//   fill ("#f4bb7a"); 
+//   ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
+//   ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
+//   ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
+//   ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
+
+
+// }
+
+
+
+  //  if (mouseX > 200) {
+  //   fill (starColour);
+  //   ellipse(starX1, starY1, starSize1, starSize1); //star 1
+  //  } else {
+  //   fill (starColour);
+  //   ellipse(starX2, starY2, starSize2, starSize2); //star 2
+  //  }
+  
+ 
+//////////////// BACKGROUND STARS
+
+fill (starColour);
+ellipse(starX1, starY1, starSize1, starSize1); //star 1
+   fill ("#f4bb7a"); 
+  ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
+  ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
+  ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
+  ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
+ 
+   fill (starColour);
+ellipse(starX2, starY2, starSize1, starSize1); //star 1
+fill ("#f4bb7a"); 
+ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
+ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
+ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
+ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
+
+
+
 }
+
