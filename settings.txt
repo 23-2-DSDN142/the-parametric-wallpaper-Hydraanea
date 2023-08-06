@@ -1,53 +1,673 @@
-You will need to fill out this file for hand in. 
-The bellow is just an example, feel free to disregard this documents contents.
-
-
 Your final settings.txt will look something like this when you are finished:
 
 /////////////////////////////////
 
 Wallpaper 1:
 
-//your parameter variables go here!
+/your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 0;  
+
+}
+
+function wallpaper_background() {
+  background("#feB96e"); //yellow background
+  // background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  let baseColour = color(0, 145, 173); // blue hat
+  // let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+
+
 }
 
 /////////////////////////////////
 
-Wallpaper 2:
-
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 180;  
+
 }
+
+function wallpaper_background() {
+  background("#feB96e"); //yellow background
+  // background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  // let baseColour = color(87, 30, 23); // red hat
+  let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 160;
+  pWallpaper.grid_settings.row_offset  = 100;  
+
+}
+
+function wallpaper_background() {
+  // background("#feB96e"); //yellow background
+  background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  let baseColour = color(0, 145, 173); // blue hat
+  // let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+
+
+///////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 220;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 100;  
+
+}
+
+function wallpaper_background() {
+  // background("#feB96e"); //yellow background
+  background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+
+//////////////////////
+
+Wallpaper 5:
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 400;
+  pWallpaper.grid_settings.cell_height = 400;
+  pWallpaper.grid_settings.row_offset  = 200;  
+
+}
+
+function wallpaper_background() {
+  // background("#feB96e"); //yellow background
+  background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  // let baseColour = color(87, 30, 23); // red hat
+  let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+  if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
+    eyeColour = color(0, 145, 173); //blue eyes
+  } else {
+    eyeColour = color(87, 30, 23); //dark red eyes
+  }
+ 
+//////////////
+
+Wallpaper 6:
+
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 60;
+  pWallpaper.grid_settings.cell_height = 60;
+  pWallpaper.grid_settings.row_offset  = 0;  
+
+}
+
+function wallpaper_background() {
+  // background("#feB96e"); //yellow background
+  background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+  if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
+    eyeColour = color(0, 145, 173); //blue eyes
+  } else {
+    eyeColour = color(87, 30, 23); //dark red eyes
+  }
+ 
+
+Wallpaper 7:
+
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;  
+
+}
+
+function wallpaper_background() {
+  background("#feB96e"); //yellow background
+  // background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  let baseColour = color(0, 145, 173); // blue hat
+  // let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+  // if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
+  //   eyeColour = color(0, 145, 173); //blue eyes
+  // } else {
+  //   eyeColour = color(87, 30, 23); //dark red eyes
+  // }
+
+
+//////////////////
+
+Wallpaper 8:
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 500;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;  
+
+}
+
+function wallpaper_background() {
+  // background("#feB96e"); //yellow background
+  background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+  if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
+    eyeColour = color(0, 145, 173); //blue eyes
+  } else {
+    eyeColour = color(87, 30, 23); //dark red eyes
+  }
+ 
+
+///////////////////
+
+Wallpaper 9:
+
+//your parameter variables go here!
+let rect_width  = 20;
+let rect_height = 20;
+
+  var starX1 = 40;
+  var starY1 = 50;
+  var starSize1 = 50;
+  
+  var starX2 = 160;
+  var starY2 = 90;
+  var starSize2 = 50;
+  
+  var headX = 100;
+  var headY = 50;
+  var headSize = 50;
+  
+  var eyeY = 55;
+  var eyeX = 115;
+  var eyeSize = 18;
+  
+  var earLeft = 75;
+  var earRight = 125;
+  var earTop = 10;
+  var earBottom = 50;
+  
+  var noseX = 100;
+  var noseY = 55;
+
+  //colour varibles are in my symbol function.
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 500;
+  pWallpaper.grid_settings.cell_height = 500;
+  pWallpaper.grid_settings.row_offset  = 200;  
+
+}
+
+function wallpaper_background() {
+  background("#feB96e"); //yellow background
+  // background("#984447"); //red background
+
+}
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
+  noStroke(0);
+  strokeWeight(1);
+
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  // let baseColour = color(87, 30, 23); // red hat
+  let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
+
+  if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
+    eyeColour = color(0, 145, 173); //blue eyes
+  } else {
+    eyeColour = color(87, 30, 23); //dark red eyes
+  }
+ 
+///////////////
