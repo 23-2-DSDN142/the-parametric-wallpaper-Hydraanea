@@ -26,9 +26,6 @@ let rect_height = 20;
   var noseX = 100;
   var noseY = 55;
 
-  // let colours;
-  let currentColour;
-
   //colour varibles are in my symbol function.
 
 function setup_wallpaper(pWallpaper) {
@@ -44,42 +41,58 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  //background("#feB96e"); //yellow
-  background("#984447"); //red
+  background("#feB96e"); //yellow background
+  // background("#984447"); //red background
 
 }
 
 
-
-
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  
 
   noStroke(0);
   strokeWeight(1);
 
-  let bodyColour = color(255, 244, 228); // white
-  // let baseColour = color(0, 145, 173); // blue
-  let baseColour = color(87, 30, 23); // red
-  // let baseColour = color(255, 244, 228); //white
-  let accentColour = color(243, 233, 189); // yellow
-  // let starColour = color(250, 250, 250);
-  let starColour = (255, 255, 255);
-  let extraColour = color(152, 68, 71); // red
-  let eyeColour = color(0, 145, 173); //blue
+// COLOURS VARIABLES
+
+  let bodyColour = color(255, 244, 228); // white cat
+  // let baseColour = color(0, 145, 173); // blue hat
+  let baseColour = color(87, 30, 23); // red hat
+  // let baseColour = color(255, 244, 228); //white hat
+  let accentColour = color(243, 233, 189); // yellow paws/eyebrows
+  let starColour = (255, 255, 255); // white star
+  let extraColour = color(152, 68, 71); // red nose/ears
+  let eyeColour = color(0, 145, 173); //blue eyes
 
   if (baseColour.toString() === color(87, 30, 23).toString()) { // if hat colour = red
-    eyeColour = color(0, 145, 173); //blue
+    eyeColour = color(0, 145, 173); //blue eyes
   } else {
-    eyeColour = color(87, 30, 23); //dark red
+    eyeColour = color(87, 30, 23); //dark red eyes
   }
  
+
+//////////////// BACKGROUND STARS/FLOWERS
+
+fill (starColour);
+ellipse(starX1, starY1, starSize1, starSize1); //star 1
+   fill ("#f4bb7a"); 
+  ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10); //petals
+  ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
+  ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
+  ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
+ 
+   fill (starColour);
+  
+ellipse(starX2, starY2, starSize1, starSize1); //star 1
+fill ("#f4bb7a"); 
+ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10); //petals/star shaper
+ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
+ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
+ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
 
 
 
 ///////////////////// CAT
-
 
 
    fill(bodyColour);
@@ -112,36 +125,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
    
    fill(bodyColour);
    triangle(noseX+6, noseY+11, noseX-6, noseY+11, noseX, noseY+6);
-  
-  //  fill ("#F3E9BD");
-  //  triangle(70, 20, 130, 120, 100, 150);
-  //  triangle(75, 150, 75, 95, 100, 150);
-  //  triangle(100, 150, 125, 95, 125, 150);
-
-  //  fill("#6EFAFB"); 
-  //  ellipse(100, 75, 30, 10);
-
-  //  fill("#F6CB0D"); 
-  //  ellipse(100, 80, 10, 10);
-
-//////////////// BACKGROUND STARS/FLOWERS
-
-fill (starColour);
-ellipse(starX1, starY1, starSize1, starSize1); //star 1
-   fill ("#f4bb7a"); 
-  ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10); //petals
-  ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
-  ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
-  ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
- 
-   fill (starColour);
-  
-ellipse(starX2, starY2, starSize1, starSize1); //star 1
-fill ("#f4bb7a"); 
-ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10); //petals
-ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
-ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
-ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
 
 
 
@@ -163,44 +146,31 @@ ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
 
 
 
-//   let distanceToStar1 = dist(mouseX, mouseY, starX1, starY1);
-// let distanceToStar2 = dist(mouseX, mouseY, starX2, starY2);
 
-// if (distanceToStar1 < starSize1 / 2) {
-//   fill (starColour);
-//   ellipse(starX1, starY1, starSize1, starSize1); //star 1
-
-//   fill ("#f4bb7a"); 
-//   ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
-//   ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
-//   ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
-//   ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
-
-// } else if (distanceToStar2 < starSize2 / 2) {
-//   fill (starColour);
-//   ellipse(starX2, starY2, starSize2, starSize2); //star 2
-
-//   fill ("#f4bb7a"); 
-//   ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
-//   ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
-//   ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
-//   ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
-
+/////// IF CODE STATEMENT I WANTED TO USE, BUT THE MOUSE'S LOCATION COULD NOT BE DETERMINDED?
 
 // }
-
-
-
   //  if (mouseX > 200) {
   //   fill (starColour);
   //   ellipse(starX1, starY1, starSize1, starSize1); //star 1
+
+  // fill ("#f4bb7a"); 
+  //   ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
+  //   ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
+  //   ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
+  //   ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
+
   //  } else {
   //   fill (starColour);
-  //   ellipse(starX2, starY2, starSize2, starSize2); //star 2
+  //   ellipse(starX2, starY2, starSize2, starSize2); //star 
+
+  //   fill ("#f4bb7a"); 
+  //   ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
+  //   ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
+  //   ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
+  //   ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
   //  }
   
- 
-
 
 
 }
