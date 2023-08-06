@@ -1,3 +1,4 @@
+
 //your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
@@ -29,20 +30,20 @@ let rect_height = 20;
   //colour varibles are in my symbol function.
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 250;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 150;  
+  pWallpaper.grid_settings.cell_width  = 220;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 100;  
 
 }
 
 function wallpaper_background() {
-  background("#feB96e"); //yellow background
-  // background("#984447"); //red background
+  // background("#feB96e"); //yellow background
+  background("#984447"); //red background
 
 }
 
@@ -75,7 +76,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 fill (starColour);
 ellipse(starX1, starY1, starSize1, starSize1); //star 1
-   fill ("#f4bb7a"); 
+   fill ("#feB96e"); 
   ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10); //petals
   ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
   ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
@@ -84,7 +85,7 @@ ellipse(starX1, starY1, starSize1, starSize1); //star 1
    fill (starColour);
   
 ellipse(starX2, starY2, starSize1, starSize1); //star 1
-fill ("#f4bb7a"); 
+fill ("#feB96e"); 
 ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10); //petals/star shaper
 ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
 ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
