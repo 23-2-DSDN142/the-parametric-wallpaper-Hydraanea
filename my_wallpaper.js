@@ -145,34 +145,5 @@ ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
   ellipse(eyeX-30, eyeY+45, eyeSize, eyeSize-5);
   ellipse(eyeX, eyeY+45, eyeSize, eyeSize-5);
 
-
-
-
-/////// IF CODE STATEMENT I WANTED TO USE, BUT THE MOUSE'S LOCATION COULD NOT BE DETERMINDED?
-
-// }
-  //  if (mouseX > 200) {
-  //   fill (starColour);
-  //   ellipse(starX1, starY1, starSize1, starSize1); //star 1
-
-  // fill ("#f4bb7a"); 
-  //   ellipse(starX1-20, starY1+20, starSize1-10, starSize1-10);
-  //   ellipse(starX1+20, starY1+20, starSize1-10, starSize1-10);
-  //   ellipse(starX1-20, starY1-20, starSize1-10, starSize1-10);
-  //   ellipse(starX1+20, starY1-20, starSize1-10, starSize1-10);
-
-  //  } else {
-  //   fill (starColour);
-  //   ellipse(starX2, starY2, starSize2, starSize2); //star 
-
-  //   fill ("#f4bb7a"); 
-  //   ellipse(starX2-20, starY2+20, starSize2-10, starSize2-10);
-  //   ellipse(starX2+20, starY2+20, starSize2-10, starSize2-10);
-  //   ellipse(starX2-20, starY2-20, starSize2-10, starSize2-10);
-  //   ellipse(starX2+20, starY2-20, starSize2-10, starSize2-10);
-  //  }
-  
-
-
 }
 
